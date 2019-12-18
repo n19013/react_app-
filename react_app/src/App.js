@@ -1,12 +1,31 @@
-import React, { Component } from 'react'
-import './App.css'
+import React from 'react'
 
-class App extends Component {
-render () {
-    return <div className='App'>
-        <h2>塔を立てる時は、まず座って費用を計算しよう</h2>
+const Hello = props => {
+  const title = '書道'
+  const imgUrl = 'http://uta.pw/shodou/img/28/214.PNG'
+  return (
+    <div>
+      <h1>{title}</h1>
+      <p>
+        <img src={imgUrl} />
+      </p>
     </div>
+  )
 }
+class App extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {}
+  }
+
+  render () {
+    return (
+      <div>
+        <Hello />
+      </div>
+    )
+  }
 }
 
 export default App
+
