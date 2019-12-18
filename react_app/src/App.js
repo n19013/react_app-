@@ -1,11 +1,23 @@
-import React, { Component } from 'react'
-import './App.css'
+import React from 'react'
 
-class App extends Component {
+const Hello = props => {
+const item = 'SDカード'
+const value = 1200
+    return <h1> {item} - {value}円</h1>
+}
+
+class App extends React.Component {
+constructor (props) {
+super(props)
+this.state = {}
+}
+
 render () {
-    return <div className='App'>
-        <h2>塔を立てる時は、まず座って費用を計算しよう</h2>
+return (
+    <div>
+        <Hello />
     </div>
+)
 }
 }
 
